@@ -84,6 +84,10 @@
     <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -99,18 +103,75 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="common\consts\DirectionEnum.cs" />
+    <Compile Include="common\consts\ServerConst.cs" />
+    <Compile Include="common\icontrols\CustomTitleBarForm.cs" />
+    <Compile Include="common\icontrols\CustomTitleBarForm.designer.cs">
+      <DependentUpon>CustomTitleBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="common\icontrols\TagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="common\icontrols\TagForm.designer.cs">
+      <DependentUpon>TagForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="common\utils\Animate.cs" />
+    <Compile Include="common\utils\SlidingManager.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\data\MaptThumbData.cs" />
+    <Compile Include="model\MaptThumbJson.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LicenseInitializer.cs" />
     <Compile Include="LicenseInitializer.Designer.cs">
       <DependentUpon>LicenseInitializer.cs</DependentUpon>
     </Compile>
+    <Compile Include="service\MaptThumbService.cs" />
+    <Compile Include="tests\CustomFontForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tests\CustomFontForm.designer.cs">
+      <DependentUpon>CustomFontForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tests\IndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tests\IndexForm.designer.cs">
+      <DependentUpon>IndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tests\TESTForm1.cs" />
+    <Compile Include="tests\TESTForm1.designer.cs">
+      <DependentUpon>TESTForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tests\TESTSwitchContents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tests\TESTSwitchContents.designer.cs">
+      <DependentUpon>TESTSwitchContents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tests\ZForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tests\ZForm.designer.cs">
+      <DependentUpon>ZForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\NewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewForm.Designer.cs">
+      <DependentUpon>NewForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="common\icontrols\CustomTitleBarForm.resx">
+      <DependentUpon>CustomTitleBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="common\icontrols\TagForm.resx">
+      <DependentUpon>TagForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +185,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="tests\CustomFontForm.resx">
+      <DependentUpon>CustomFontForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tests\IndexForm.resx">
+      <DependentUpon>IndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tests\TESTForm1.resx">
+      <DependentUpon>TESTForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tests\TESTSwitchContents.resx">
+      <DependentUpon>TESTSwitchContents.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -153,11 +227,64 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="res\images\CornerTag_256.png" />
-    <Content Include="res\images\iCartoLogo_512.png" />
+    <Content Include="res\images\icons\CornerTag_256.png" />
+    <Content Include="res\images\icons\iCartoLogo_512.png" />
+    <Content Include="res\maps\交通1综合图.JPG" />
+    <Content Include="res\maps\交通2公路版.JPG" />
+    <Content Include="res\maps\交通3主干线.JPG" />
+    <Content Include="res\maps\交通4数据渲染图.JPG" />
+    <Content Include="res\maps\交通5公交站亭.JPG" />
+    <Content Include="res\maps\其他图1空气质量图.JPG" />
+    <Content Include="res\maps\其他图2旅游玩乐图.JPG" />
+    <Content Include="res\maps\其他图3地震灾害.JPG" />
+    <Content Include="res\maps\国土1地表覆盖.JPG" />
+    <Content Include="res\maps\国土2地理概况.jpg" />
+    <Content Include="res\maps\国土3地表覆被指数.jpg" />
+    <Content Include="res\maps\国土4居民地.JPG" />
+    <Content Include="res\maps\国土5水系.JPG" />
+    <Content Include="res\maps\城管1网格图.JPG" />
+    <Content Include="res\maps\城管2执法单位图.JPG" />
+    <Content Include="res\maps\城管3垃圾间分布图.JPG" />
+    <Content Include="res\maps\城管4工地分布图.JPG" />
+    <Content Include="res\maps\测绘1地形图500.jpg" />
+    <Content Include="res\maps\测绘2地形图2000.JPG" />
+    <Content Include="res\maps\测绘3地形图10000.jpg" />
+    <Content Include="res\maps\测绘4地形图50000.JPG" />
+    <Content Include="res\maps\社管1智慧社管网格图.JPG" />
+    <Content Include="res\maps\社管2报刊亭分布图.JPG" />
+    <Content Include="res\maps\社管3电话亭分布图.JPG" />
+    <Content Include="res\maps\社管4户外健身设施分布图.JPG" />
+    <Content Include="res\maps\社管5街头座椅与休息亭分布图.JPG" />
+    <Content Include="res\maps\规划1城区.JPG" />
+    <Content Include="res\maps\规划2核心城区.JPG" />
+    <Content Include="res\maps\规划3公厕分布图.JPG" />
+    <Content Include="res\maps\警用1监控电子眼分布图.JPG" />
+    <Content Include="res\maps\警用2治安岗亭分布图.JPG" />
+    <Content Include="res\maps\警用3重大危险源分布图.JPG" />
+    <Content Include="res\maps\警用4消防设施分布图.JPG" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="controller\" />
     <Folder Include="res\trash\" />
+    <Folder Include="tests\examples\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libs\FontAwesomeIcons\FontAwesomeIcons.csproj">
+      <Project>{56f662a1-d1e3-453f-bf74-9d8d03b6affc}</Project>
+      <Name>FontAwesomeIcons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libs\LollipopUI\LollipopUI.csproj">
+      <Project>{eb11c287-896c-4dbd-8ec4-62e8cae22110}</Project>
+      <Name>LollipopUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libs\MaterialSkin\MaterialSkin.csproj">
+      <Project>{f333bb48-3737-4476-8182-75ec76352689}</Project>
+      <Name>MaterialSkin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libs\Transitions\Transitions.csproj">
+      <Project>{95cde461-0720-4c3b-b5e1-d188391fb7c0}</Project>
+      <Name>Transitions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
