@@ -105,7 +105,9 @@
   <ItemGroup>
     <Compile Include="common\consts\DirectionEnum.cs" />
     <Compile Include="common\consts\ServerConst.cs" />
-    <Compile Include="common\icontrols\CustomTitleBarForm.cs" />
+    <Compile Include="common\icontrols\CustomTitleBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="common\icontrols\CustomTitleBarForm.designer.cs">
       <DependentUpon>CustomTitleBarForm.cs</DependentUpon>
     </Compile>
@@ -144,7 +146,9 @@
     <Compile Include="tests\IndexForm.designer.cs">
       <DependentUpon>IndexForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="tests\TESTForm1.cs" />
+    <Compile Include="tests\TESTForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="tests\TESTForm1.designer.cs">
       <DependentUpon>TESTForm1.cs</DependentUpon>
     </Compile>

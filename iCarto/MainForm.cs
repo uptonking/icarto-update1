@@ -1,3 +1,4 @@
+using iCarto.common.icontrols;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +9,7 @@ using System.Windows.Forms;
 
 namespace iCarto
 {
-    public partial class MainForm : Form
+    public partial class MainForm : CustomTitleBarForm
     {
         public MainForm()
         {
