@@ -63,9 +63,9 @@ namespace iCarto.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CornerTag_256 {
+        internal static System.Drawing.Bitmap CornerTag {
             get {
-                object obj = ResourceManager.GetObject("CornerTag_256", resourceCulture);
+                object obj = ResourceManager.GetObject("CornerTag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -129,7 +129,7 @@
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.titleLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.titleLabel.Location = new System.Drawing.Point(68, 5);
+            this.titleLabel.Location = new System.Drawing.Point(52, 5);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(43, 17);
             this.titleLabel.TabIndex = 0;
@@ -145,7 +145,6 @@
             this.Controls.Add(this.titlePanel);
             this.Name = "CustomTitleBarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Controls.SetChildIndex(this.titlePanel, 0);
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.titleIcon)).EndInit();

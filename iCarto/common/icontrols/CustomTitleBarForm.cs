@@ -14,7 +14,7 @@ namespace iCarto.common.icontrols
     /// <summary>
     /// 自定义标题栏的窗体
     /// </summary>
-    public partial class CustomTitleBarForm : TagForm
+    public partial class CustomTitleBarForm : Form
     {
         private bool moving = false;
         private Point oldMousePosition;

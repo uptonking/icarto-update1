@@ -34,7 +34,7 @@
             // 
             // cornerTag
             // 
-            this.cornerTag.Image = global::iCarto.Properties.Resources.CornerTag_256;
+            this.cornerTag.Image = global::iCarto.Properties.Resources.CornerTag;
             this.cornerTag.Location = new System.Drawing.Point(0, 0);
             this.cornerTag.Margin = new System.Windows.Forms.Padding(0);
             this.cornerTag.Name = "cornerTag";

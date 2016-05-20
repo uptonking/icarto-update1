@@ -111,6 +111,9 @@
     <Compile Include="common\icontrols\CustomTitleBarForm.designer.cs">
       <DependentUpon>CustomTitleBarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="common\icontrols\OrientedTextLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="common\icontrols\TagForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +135,11 @@
     <Compile Include="LicenseInitializer.cs" />
     <Compile Include="LicenseInitializer.Designer.cs">
       <DependentUpon>LicenseInitializer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="service\MaptThumbService.cs" />
     <Compile Include="tests\CustomFontForm.cs">
@@ -181,14 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="tests\CustomFontForm.resx">
       <DependentUpon>CustomFontForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,7 +234,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="res\images\icons\CornerTag_256.png" />
+    <Content Include="res\images\icons\CornerTag.png" />
     <Content Include="res\images\icons\iCartoLogo_512.png" />
     <Content Include="res\maps\交通1综合图.JPG" />
     <Content Include="res\maps\交通2公路版.JPG" />
@@ -259,6 +262,7 @@
     <Content Include="res\maps\社管3电话亭分布图.JPG" />
     <Content Include="res\maps\社管4户外健身设施分布图.JPG" />
     <Content Include="res\maps\社管5街头座椅与休息亭分布图.JPG" />
+    <Content Include="res\maps\网眼图模板800.jpg" />
     <Content Include="res\maps\规划1城区.JPG" />
     <Content Include="res\maps\规划2核心城区.JPG" />
     <Content Include="res\maps\规划3公厕分布图.JPG" />
