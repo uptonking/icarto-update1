@@ -102,5 +102,10 @@ namespace iCarto
             uiSwap();
         }
 
+        private void back2IndexBtn_Click(object sender, EventArgs e)
+        {
+            uiSwap();
+        }
+
     }
 }
