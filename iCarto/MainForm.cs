@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using Transitions;
 using iCarto.common.icontrols;
 using System.Drawing.Text;
+using System.Collections;
+using iCarto.common.utils;
 
 namespace iCarto
 {
@@ -16,6 +18,11 @@ namespace iCarto
         public MainForm()
         {
             InitializeComponent();
+
+
+
+            //设置字体
+            configureFonts();
         }
 
         private void swapBtnClick(object sender, EventArgs e)
@@ -31,24 +38,24 @@ namespace iCarto
 
         public void configureFonts()
         {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            string fontPath = @"C:\Users\Yao\Documents\Visual Studio 2012\Projects\iCarto\iCarto\res\fonts\SourceHanSansSC-Regular.ttf";
+            //准备带改变的Labels
+            List<Label> labelsList = new List<Label>();
+            labelsList.Add(logoLabel);
+            labelsList.Add(usrNameLabel);
+            labelsList.Add(naviIndustryLabel);
+            labelsList.Add(naviHotMapsLabel);
+            labelsList.Add(naviLatestMapsLabel);
 
-            try
+            //加载本地字体
+            FontFamily ff = new CustomFontsManager().loadFonts();
+
+            //修改Lables
+            foreach (var item in labelsList)
             {
-
-                pfc.AddFontFile(fontPath);//字体的路径及名字 
-                Font f1 = new Font(pfc.Families[0], 14);
-                label1.Font = f1;
-
-
+                item.Font = new Font(ff, item.Font.Size);
             }
-            catch (Exception)
-            {
 
-                MessageBox.Show("字体不存在或加载失败\n程序将以默认字体显示", "警告", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            }
+            searchTextBox.Font = new Font(ff, searchTextBox.Font.Size);
 
         }
 

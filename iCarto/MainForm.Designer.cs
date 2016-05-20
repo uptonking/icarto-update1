@@ -53,7 +53,7 @@ namespace iCarto
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.iconButton2 = new FontAwesomeIcons.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
+            this.naviLatestMapsLabel = new System.Windows.Forms.Label();
             this.HotMapsGroupBox = new System.Windows.Forms.GroupBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -63,7 +63,7 @@ namespace iCarto
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.iconButton1 = new FontAwesomeIcons.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.naviHotMapsLabel = new System.Windows.Forms.Label();
             this.industryGroupBox = new System.Windows.Forms.GroupBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -73,7 +73,7 @@ namespace iCarto
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.industryMore = new FontAwesomeIcons.IconButton();
-            this.industryLabel = new System.Windows.Forms.Label();
+            this.naviIndustryLabel = new System.Windows.Forms.Label();
             this.mainGroupBox = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.indexGroupBox.SuspendLayout();
@@ -188,7 +188,7 @@ namespace iCarto
             // logoPicBox
             // 
             this.logoPicBox.Image = global::iCarto.Properties.Resources.iCartoLogo_512;
-            this.logoPicBox.Location = new System.Drawing.Point(43, 19);
+            this.logoPicBox.Location = new System.Drawing.Point(47, 17);
             this.logoPicBox.Name = "logoPicBox";
             this.logoPicBox.Size = new System.Drawing.Size(64, 64);
             this.logoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,7 +200,7 @@ namespace iCarto
             this.logoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.logoLabel.AutoSize = true;
             this.logoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.logoLabel.Location = new System.Drawing.Point(140, 30);
+            this.logoLabel.Location = new System.Drawing.Point(137, 25);
             this.logoLabel.Name = "logoLabel";
             this.logoLabel.Size = new System.Drawing.Size(453, 55);
             this.logoLabel.TabIndex = 0;
@@ -311,7 +311,7 @@ namespace iCarto
             this.LatestMapsGroupBox.Controls.Add(this.pictureBox20);
             this.LatestMapsGroupBox.Controls.Add(this.pictureBox21);
             this.LatestMapsGroupBox.Controls.Add(this.iconButton2);
-            this.LatestMapsGroupBox.Controls.Add(this.label2);
+            this.LatestMapsGroupBox.Controls.Add(this.naviLatestMapsLabel);
             this.LatestMapsGroupBox.Location = new System.Drawing.Point(846, 0);
             this.LatestMapsGroupBox.Margin = new System.Windows.Forms.Padding(0);
             this.LatestMapsGroupBox.Name = "LatestMapsGroupBox";
@@ -404,15 +404,15 @@ namespace iCarto
             this.iconButton2.TabStop = false;
             this.iconButton2.ToolTipText = null;
             // 
-            // label2
+            // naviLatestMapsLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.Location = new System.Drawing.Point(27, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "最新地图模板";
+            this.naviLatestMapsLabel.AutoSize = true;
+            this.naviLatestMapsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.naviLatestMapsLabel.Location = new System.Drawing.Point(27, 9);
+            this.naviLatestMapsLabel.Name = "naviLatestMapsLabel";
+            this.naviLatestMapsLabel.Size = new System.Drawing.Size(124, 24);
+            this.naviLatestMapsLabel.TabIndex = 0;
+            this.naviLatestMapsLabel.Text = "最新地图模板";
             // 
             // HotMapsGroupBox
             // 
@@ -424,7 +424,7 @@ namespace iCarto
             this.HotMapsGroupBox.Controls.Add(this.pictureBox13);
             this.HotMapsGroupBox.Controls.Add(this.pictureBox14);
             this.HotMapsGroupBox.Controls.Add(this.iconButton1);
-            this.HotMapsGroupBox.Controls.Add(this.label1);
+            this.HotMapsGroupBox.Controls.Add(this.naviHotMapsLabel);
             this.HotMapsGroupBox.Location = new System.Drawing.Point(420, 0);
             this.HotMapsGroupBox.Margin = new System.Windows.Forms.Padding(0);
             this.HotMapsGroupBox.Name = "HotMapsGroupBox";
@@ -517,15 +517,15 @@ namespace iCarto
             this.iconButton1.TabStop = false;
             this.iconButton1.ToolTipText = null;
             // 
-            // label1
+            // naviHotMapsLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(27, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "最热地图模板";
+            this.naviHotMapsLabel.AutoSize = true;
+            this.naviHotMapsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.naviHotMapsLabel.Location = new System.Drawing.Point(27, 7);
+            this.naviHotMapsLabel.Name = "naviHotMapsLabel";
+            this.naviHotMapsLabel.Size = new System.Drawing.Size(124, 24);
+            this.naviHotMapsLabel.TabIndex = 0;
+            this.naviHotMapsLabel.Text = "最热地图模板";
             // 
             // industryGroupBox
             // 
@@ -537,7 +537,7 @@ namespace iCarto
             this.industryGroupBox.Controls.Add(this.pictureBox3);
             this.industryGroupBox.Controls.Add(this.pictureBox1);
             this.industryGroupBox.Controls.Add(this.industryMore);
-            this.industryGroupBox.Controls.Add(this.industryLabel);
+            this.industryGroupBox.Controls.Add(this.naviIndustryLabel);
             this.industryGroupBox.Location = new System.Drawing.Point(0, 0);
             this.industryGroupBox.Margin = new System.Windows.Forms.Padding(0);
             this.industryGroupBox.Name = "industryGroupBox";
@@ -631,15 +631,15 @@ namespace iCarto
             this.industryMore.TabStop = false;
             this.industryMore.ToolTipText = null;
             // 
-            // industryLabel
+            // naviIndustryLabel
             // 
-            this.industryLabel.AutoSize = true;
-            this.industryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.industryLabel.Location = new System.Drawing.Point(27, 9);
-            this.industryLabel.Name = "industryLabel";
-            this.industryLabel.Size = new System.Drawing.Size(112, 25);
-            this.industryLabel.TabIndex = 0;
-            this.industryLabel.Text = "行业专题图";
+            this.naviIndustryLabel.AutoSize = true;
+            this.naviIndustryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.naviIndustryLabel.Location = new System.Drawing.Point(27, 7);
+            this.naviIndustryLabel.Name = "naviIndustryLabel";
+            this.naviIndustryLabel.Size = new System.Drawing.Size(105, 24);
+            this.naviIndustryLabel.TabIndex = 0;
+            this.naviIndustryLabel.Text = "行业专题图";
             // 
             // mainGroupBox
             // 
@@ -741,7 +741,7 @@ namespace iCarto
         private FontAwesomeIcons.IconButton      searchBtn;
         private LollipopTextBox                  searchTextBox;
         private System.Windows.Forms.GroupBox industryGroupBox;
-        private System.Windows.Forms.Label industryLabel;
+        private System.Windows.Forms.Label naviIndustryLabel;
         private FontAwesomeIcons.IconButton industryMore;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -755,7 +755,7 @@ namespace iCarto
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox21;
         private FontAwesomeIcons.IconButton iconButton2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label naviLatestMapsLabel;
         private System.Windows.Forms.GroupBox HotMapsGroupBox;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
@@ -765,7 +765,7 @@ namespace iCarto
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
         private FontAwesomeIcons.IconButton iconButton1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label naviHotMapsLabel;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox4;

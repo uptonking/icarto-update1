@@ -121,6 +121,7 @@
       <DependentUpon>TagForm.cs</DependentUpon>
     </Compile>
     <Compile Include="common\utils\Animate.cs" />
+    <Compile Include="common\utils\CustomFontsManager.cs" />
     <Compile Include="common\utils\SlidingManager.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
