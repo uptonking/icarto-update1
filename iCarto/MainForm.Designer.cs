@@ -85,10 +85,10 @@ namespace iCarto
             this.label3 = new System.Windows.Forms.Label();
             this.iconButton6 = new FontAwesomeIcons.IconButton();
             this.editMainGroupBox = new System.Windows.Forms.GroupBox();
-            this.mainAxMapControl = new ESRI.ArcGIS.Controls.AxMapControl();
-            this.infoMainGroupBox = new System.Windows.Forms.GroupBox();
             this.ToolbarGroupBox = new System.Windows.Forms.GroupBox();
             this.mainAxToolbarControl = new ESRI.ArcGIS.Controls.AxToolbarControl();
+            this.mainAxMapControl = new ESRI.ArcGIS.Controls.AxMapControl();
+            this.infoMainGroupBox = new System.Windows.Forms.GroupBox();
             this.TOCGroupBox = new System.Windows.Forms.GroupBox();
             this.mainAxTOCControl = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.indexGroupBox.SuspendLayout();
@@ -137,10 +137,10 @@ namespace iCarto
             ((System.ComponentModel.ISupportInitialize)(this.iconButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconButton6)).BeginInit();
             this.editMainGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mainAxMapControl)).BeginInit();
-            this.infoMainGroupBox.SuspendLayout();
             this.ToolbarGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxToolbarControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainAxMapControl)).BeginInit();
+            this.infoMainGroupBox.SuspendLayout();
             this.TOCGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxTOCControl)).BeginInit();
             this.SuspendLayout();
@@ -796,6 +796,7 @@ namespace iCarto
             // 
             // editMainGroupBox
             // 
+            this.editMainGroupBox.Controls.Add(this.ToolbarGroupBox);
             this.editMainGroupBox.Controls.Add(this.mainAxMapControl);
             this.editMainGroupBox.Location = new System.Drawing.Point(0, 110);
             this.editMainGroupBox.Margin = new System.Windows.Forms.Padding(0);
@@ -805,6 +806,27 @@ namespace iCarto
             this.editMainGroupBox.TabIndex = 9;
             this.editMainGroupBox.TabStop = false;
             this.editMainGroupBox.Paint += new System.Windows.Forms.PaintEventHandler(this.removeGroupBoxBorder_Paint);
+            // 
+            // ToolbarGroupBox
+            // 
+            this.ToolbarGroupBox.Controls.Add(this.mainAxToolbarControl);
+            this.ToolbarGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ToolbarGroupBox.Location = new System.Drawing.Point(0, 13);
+            this.ToolbarGroupBox.Margin = new System.Windows.Forms.Padding(0);
+            this.ToolbarGroupBox.Name = "ToolbarGroupBox";
+            this.ToolbarGroupBox.Padding = new System.Windows.Forms.Padding(0);
+            this.ToolbarGroupBox.Size = new System.Drawing.Size(1030, 45);
+            this.ToolbarGroupBox.TabIndex = 1;
+            this.ToolbarGroupBox.TabStop = false;
+            // 
+            // mainAxToolbarControl
+            // 
+            this.mainAxToolbarControl.Location = new System.Drawing.Point(0, 13);
+            this.mainAxToolbarControl.Margin = new System.Windows.Forms.Padding(0);
+            this.mainAxToolbarControl.Name = "mainAxToolbarControl";
+            this.mainAxToolbarControl.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainAxToolbarControl.OcxState")));
+            this.mainAxToolbarControl.Size = new System.Drawing.Size(662, 28);
+            this.mainAxToolbarControl.TabIndex = 0;
             // 
             // mainAxMapControl
             // 
@@ -818,7 +840,6 @@ namespace iCarto
             // 
             // infoMainGroupBox
             // 
-            this.infoMainGroupBox.Controls.Add(this.ToolbarGroupBox);
             this.infoMainGroupBox.Controls.Add(this.TOCGroupBox);
             this.infoMainGroupBox.Location = new System.Drawing.Point(1030, 110);
             this.infoMainGroupBox.Margin = new System.Windows.Forms.Padding(0);
@@ -829,33 +850,13 @@ namespace iCarto
             this.infoMainGroupBox.TabStop = false;
             this.infoMainGroupBox.Paint += new System.Windows.Forms.PaintEventHandler(this.removeGroupBoxBorder_Paint);
             // 
-            // ToolbarGroupBox
-            // 
-            this.ToolbarGroupBox.Controls.Add(this.mainAxToolbarControl);
-            this.ToolbarGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ToolbarGroupBox.Location = new System.Drawing.Point(0, 13);
-            this.ToolbarGroupBox.Margin = new System.Windows.Forms.Padding(0);
-            this.ToolbarGroupBox.Name = "ToolbarGroupBox";
-            this.ToolbarGroupBox.Padding = new System.Windows.Forms.Padding(0);
-            this.ToolbarGroupBox.Size = new System.Drawing.Size(240, 45);
-            this.ToolbarGroupBox.TabIndex = 1;
-            this.ToolbarGroupBox.TabStop = false;
-            // 
-            // mainAxToolbarControl
-            // 
-            this.mainAxToolbarControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainAxToolbarControl.Location = new System.Drawing.Point(0, 13);
-            this.mainAxToolbarControl.Margin = new System.Windows.Forms.Padding(0);
-            this.mainAxToolbarControl.Name = "mainAxToolbarControl";
-            this.mainAxToolbarControl.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainAxToolbarControl.OcxState")));
-            this.mainAxToolbarControl.Size = new System.Drawing.Size(240, 28);
-            this.mainAxToolbarControl.TabIndex = 0;
-            // 
             // TOCGroupBox
             // 
             this.TOCGroupBox.Controls.Add(this.mainAxTOCControl);
-            this.TOCGroupBox.Location = new System.Drawing.Point(0, 45);
+            this.TOCGroupBox.Location = new System.Drawing.Point(0, 0);
+            this.TOCGroupBox.Margin = new System.Windows.Forms.Padding(0);
             this.TOCGroupBox.Name = "TOCGroupBox";
+            this.TOCGroupBox.Padding = new System.Windows.Forms.Padding(0);
             this.TOCGroupBox.Size = new System.Drawing.Size(240, 280);
             this.TOCGroupBox.TabIndex = 0;
             this.TOCGroupBox.TabStop = false;
@@ -864,11 +865,12 @@ namespace iCarto
             // mainAxTOCControl
             // 
             this.mainAxTOCControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainAxTOCControl.Location = new System.Drawing.Point(3, 16);
+            this.mainAxTOCControl.Location = new System.Drawing.Point(0, 13);
             this.mainAxTOCControl.Name = "mainAxTOCControl";
             this.mainAxTOCControl.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainAxTOCControl.OcxState")));
-            this.mainAxTOCControl.Size = new System.Drawing.Size(234, 261);
+            this.mainAxTOCControl.Size = new System.Drawing.Size(240, 267);
             this.mainAxTOCControl.TabIndex = 0;
+            this.mainAxTOCControl.OnMouseDown += new ESRI.ArcGIS.Controls.ITOCControlEvents_Ax_OnMouseDownEventHandler(this.mainAxTOCControl_OnMouseDown);
             // 
             // MainForm
             // 
@@ -879,6 +881,7 @@ namespace iCarto
             this.Controls.Add(this.indexGroupBox);
             this.Name = "MainForm";
             this.Title = "iCarto ¿ìËÙÖÆÍ¼";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.Controls.SetChildIndex(this.indexGroupBox, 0);
             this.Controls.SetChildIndex(this.mainGroupBox, 0);
             this.indexGroupBox.ResumeLayout(false);
@@ -934,10 +937,10 @@ namespace iCarto
             ((System.ComponentModel.ISupportInitialize)(this.iconButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconButton6)).EndInit();
             this.editMainGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mainAxMapControl)).EndInit();
-            this.infoMainGroupBox.ResumeLayout(false);
             this.ToolbarGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mainAxToolbarControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainAxMapControl)).EndInit();
+            this.infoMainGroupBox.ResumeLayout(false);
             this.TOCGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mainAxTOCControl)).EndInit();
             this.ResumeLayout(false);
