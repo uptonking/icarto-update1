@@ -55,10 +55,17 @@
     <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="ESRI.ArcGIS.AxControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
-    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -66,8 +73,13 @@
     <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -79,8 +91,9 @@
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -149,6 +162,34 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="service\MaptThumbService.cs" />
+    <Compile Include="tests\AOApplicationExtension.cs" />
+    <Compile Include="tests\AOArcGISContextMenu.cs" />
+    <Compile Include="tests\AODesktopPropertyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tests\AODesktopPropertyPage.Designer.cs">
+      <DependentUpon>AODesktopPropertyPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tests\AODesktopPropertyPageLayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tests\AODesktopPropertyPageLayer.Designer.cs">
+      <DependentUpon>AODesktopPropertyPageLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tests\AODockableWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tests\AODockableWindow.Designer.cs">
+      <DependentUpon>AODockableWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tests\AODockableWindowCommand.cs" />
+    <Compile Include="tests\AOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tests\AOForm.Designer.cs">
+      <DependentUpon>AOForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tests\AOJITExtension.cs" />
     <Compile Include="tests\CustomFontForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +239,21 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tests\AODesktopPropertyPage.resx">
+      <DependentUpon>AODesktopPropertyPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tests\AODesktopPropertyPageLayer.resx">
+      <DependentUpon>AODesktopPropertyPageLayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tests\AODockableWindow.resx">
+      <DependentUpon>AODockableWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tests\AOForm.resx">
+      <DependentUpon>AOForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tests\CustomFontForm.resx">
       <DependentUpon>CustomFontForm.cs</DependentUpon>
@@ -277,6 +333,7 @@
     <Content Include="res\maps\警用2治安岗亭分布图.JPG" />
     <Content Include="res\maps\警用3重大危险源分布图.JPG" />
     <Content Include="res\maps\警用4消防设施分布图.JPG" />
+    <EmbeddedResource Include="tests\AODockableWindowCommand.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controller\" />
