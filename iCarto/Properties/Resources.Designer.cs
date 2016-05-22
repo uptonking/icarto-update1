@@ -73,6 +73,16 @@ namespace iCarto.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap esriCartographyMarker_61_White {
+            get {
+                object obj = ResourceManager.GetObject("esriCartographyMarker_61_White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iCartoLogo_512 {
             get {
                 object obj = ResourceManager.GetObject("iCartoLogo_512", resourceCulture);

@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AOForm));
             this.mapSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.mainAxMapControl = new ESRI.ArcGIS.Controls.AxMapControl();
             this.mainAxTOCControl = new ESRI.ArcGIS.Controls.AxTOCControl();
+            this.mainAxMapControl = new ESRI.ArcGIS.Controls.AxMapControl();
             this.mainAxToolbarControl = new ESRI.ArcGIS.Controls.AxToolbarControl();
             this.formatPainterBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,8 +39,8 @@
             this.mapSplitContainer.Panel1.SuspendLayout();
             this.mapSplitContainer.Panel2.SuspendLayout();
             this.mapSplitContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mainAxMapControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxTOCControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainAxMapControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxToolbarControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,15 +61,6 @@
             this.mapSplitContainer.SplitterDistance = 208;
             this.mapSplitContainer.TabIndex = 1;
             // 
-            // mainAxMapControl
-            // 
-            this.mainAxMapControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainAxMapControl.Location = new System.Drawing.Point(0, 0);
-            this.mainAxMapControl.Name = "mainAxMapControl";
-            this.mainAxMapControl.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainAxMapControl.OcxState")));
-            this.mainAxMapControl.Size = new System.Drawing.Size(412, 413);
-            this.mainAxMapControl.TabIndex = 0;
-            // 
             // mainAxTOCControl
             // 
             this.mainAxTOCControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -78,6 +69,15 @@
             this.mainAxTOCControl.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainAxTOCControl.OcxState")));
             this.mainAxTOCControl.Size = new System.Drawing.Size(208, 413);
             this.mainAxTOCControl.TabIndex = 0;
+            // 
+            // mainAxMapControl
+            // 
+            this.mainAxMapControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainAxMapControl.Location = new System.Drawing.Point(0, 0);
+            this.mainAxMapControl.Name = "mainAxMapControl";
+            this.mainAxMapControl.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainAxMapControl.OcxState")));
+            this.mainAxMapControl.Size = new System.Drawing.Size(412, 413);
+            this.mainAxMapControl.TabIndex = 0;
             // 
             // mainAxToolbarControl
             // 
@@ -99,7 +99,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::iCarto.Properties.Resources.iCartoLogo_512;
+            this.pictureBox1.Image = global::iCarto.Properties.Resources.esriCartographyMarker_61_White;
             this.pictureBox1.Location = new System.Drawing.Point(657, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
@@ -122,8 +122,8 @@
             this.mapSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mapSplitContainer)).EndInit();
             this.mapSplitContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mainAxMapControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxTOCControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainAxMapControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxToolbarControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

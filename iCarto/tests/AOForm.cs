@@ -15,6 +15,14 @@ namespace iCarto.tests
         public AOForm()
         {
             InitializeComponent();
+
+            //MapControl显示shapefile
+            string lhkRailFilePath = @"C:\Users\Yao\Documents\Visual Studio 2012\Projects\iCarto\iCarto\res\data\lhk铁路线shapefile\";
+            string lhkRailFileName = @"grailn";
+            mainAxMapControl.AddShapeFile(lhkRailFilePath, lhkRailFileName);
+
+
+
         }
     }
 }

@@ -130,6 +130,9 @@
   <data name="警用4消防设施分布图" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\警用4消防设施分布图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="规划2核心城区" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\maps\规划2核心城区.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="其他图3地震灾害" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\其他图3地震灾害.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,23 +142,17 @@
   <data name="社管5街头座椅与休息亭分布图" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\社管5街头座椅与休息亭分布图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iCartoLogo_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\images\icons\icartologo_512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="城管3垃圾间分布图" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\城管3垃圾间分布图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="国土3地表覆被指数" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\res\maps\国土3地表覆被指数.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="警用1监控电子眼分布图" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\res\maps\警用1监控电子眼分布图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="国土5水系" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\国土5水系.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="测绘4地形图50000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\测绘4地形图50000.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="其他图2旅游玩乐图" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\res\maps\其他图2旅游玩乐图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="国土4居民地" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\国土4居民地.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +169,8 @@
   <data name="其他图1空气质量图" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\其他图1空气质量图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="规划2核心城区" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\res\maps\规划2核心城区.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="国土3地表覆被指数" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\maps\国土3地表覆被指数.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="社管1智慧社管网格图" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\社管1智慧社管网格图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +178,11 @@
   <data name="警用2治安岗亭分布图" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\警用2治安岗亭分布图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iCartoLogo_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\res\images\icons\icartologo_512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="其他图2旅游玩乐图" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\maps\其他图2旅游玩乐图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="警用1监控电子眼分布图" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\maps\警用1监控电子眼分布图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="城管4工地分布图" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\maps\城管4工地分布图.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -222,5 +222,8 @@
   </data>
   <data name="CornerTag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\images\icons\cornertag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="esriCartographyMarker_61_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\symbols\esri\Cartographic\esriCartographyMarker_61_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
