@@ -461,6 +461,8 @@
     <None Include="res\data\lhk铁路线shapefile\grailn.shx" />
     <None Include="res\data\s01行政区划.mxd" />
     <None Include="res\fonts\SourceHanSansSC-Normal.ttf" />
+    <None Include="res\symbols\jinyao.ServerStyle" />
+    <None Include="res\symbols\jinyao.style" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

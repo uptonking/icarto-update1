@@ -24,5 +24,10 @@ namespace iCarto.tests
 
 
         }
+
+        private void formatPainterBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello,B**ches");
+        }
     }
 }
