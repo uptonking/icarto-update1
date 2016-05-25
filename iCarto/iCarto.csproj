@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -71,7 +71,7 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Framework, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -82,10 +82,10 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Output, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -277,6 +277,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="res\data\lhk行政驻地点shapefileUpdate\govpoi.dbf" />
+    <None Include="res\data\lhk行政驻地点shapefileUpdate\govpoi.prj" />
+    <None Include="res\data\lhk行政驻地点shapefileUpdate\govpoi.sbn" />
+    <None Include="res\data\lhk行政驻地点shapefileUpdate\govpoi.sbx" />
+    <None Include="res\data\lhk行政驻地点shapefileUpdate\govpoi.shp" />
+    <None Include="res\data\lhk行政驻地点shapefileUpdate\govpoi.shx" />
     <None Include="res\data\lhk_division.gdb\a00000001.freelist" />
     <None Include="res\data\lhk_division.gdb\a00000001.gdbindexes" />
     <None Include="res\data\lhk_division.gdb\a00000001.gdbtable" />
@@ -463,6 +469,8 @@
     <None Include="res\fonts\SourceHanSansSC-Normal.ttf" />
     <None Include="res\symbols\jinyao.ServerStyle" />
     <None Include="res\symbols\jinyao.style" />
+    <None Include="res\symbols\矢量地图符号库_ESRI_V1.31.style" />
+    <None Include="res\symbols\矢量地图符号库_V2.0 for ArcGIS10.style" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -482,6 +490,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="res\data\lhk行政驻地点shapefileUpdate\govpoi.xml" />
     <Content Include="res\data\lhk乡镇级政区面shapefile\乡镇级政区.shp.xml" />
     <Content Include="res\data\lhk行政驻地点shapefile\govpoi.xml" />
     <Content Include="res\data\lhk铁路线shapefile\grailn.shp.xml" />

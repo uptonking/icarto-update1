@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AOForm));
             this.mapSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.formatPainterBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainAxTOCControl = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.mainAxMapControl = new ESRI.ArcGIS.Controls.AxMapControl();
+            this.formatPainterBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainAxToolbarControl = new ESRI.ArcGIS.Controls.AxToolbarControl();
             ((System.ComponentModel.ISupportInitialize)(this.mapSplitContainer)).BeginInit();
             this.mapSplitContainer.Panel1.SuspendLayout();
             this.mapSplitContainer.Panel2.SuspendLayout();
             this.mapSplitContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxTOCControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxMapControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxToolbarControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +60,24 @@
             this.mapSplitContainer.Size = new System.Drawing.Size(624, 413);
             this.mapSplitContainer.SplitterDistance = 208;
             this.mapSplitContainer.TabIndex = 1;
+            // 
+            // mainAxTOCControl
+            // 
+            this.mainAxTOCControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainAxTOCControl.Location = new System.Drawing.Point(0, 0);
+            this.mainAxTOCControl.Name = "mainAxTOCControl";
+            this.mainAxTOCControl.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainAxTOCControl.OcxState")));
+            this.mainAxTOCControl.Size = new System.Drawing.Size(208, 413);
+            this.mainAxTOCControl.TabIndex = 0;
+            // 
+            // mainAxMapControl
+            // 
+            this.mainAxMapControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainAxMapControl.Location = new System.Drawing.Point(0, 0);
+            this.mainAxMapControl.Name = "mainAxMapControl";
+            this.mainAxMapControl.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainAxMapControl.OcxState")));
+            this.mainAxMapControl.Size = new System.Drawing.Size(412, 413);
+            this.mainAxMapControl.TabIndex = 0;
             // 
             // formatPainterBtn
             // 
@@ -81,24 +99,6 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // mainAxTOCControl
-            // 
-            this.mainAxTOCControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainAxTOCControl.Location = new System.Drawing.Point(0, 0);
-            this.mainAxTOCControl.Name = "mainAxTOCControl";
-            this.mainAxTOCControl.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainAxTOCControl.OcxState")));
-            this.mainAxTOCControl.Size = new System.Drawing.Size(208, 413);
-            this.mainAxTOCControl.TabIndex = 0;
-            // 
-            // mainAxMapControl
-            // 
-            this.mainAxMapControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainAxMapControl.Location = new System.Drawing.Point(0, 0);
-            this.mainAxMapControl.Name = "mainAxMapControl";
-            this.mainAxMapControl.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainAxMapControl.OcxState")));
-            this.mainAxMapControl.Size = new System.Drawing.Size(412, 413);
-            this.mainAxMapControl.TabIndex = 0;
-            // 
             // mainAxToolbarControl
             // 
             this.mainAxToolbarControl.Location = new System.Drawing.Point(0, 0);
@@ -118,14 +118,14 @@
             this.Controls.Add(this.mapSplitContainer);
             this.Controls.Add(this.mainAxToolbarControl);
             this.Name = "AOForm";
-            this.Text = "AOForm";
+            this.Text = "Style样式测试";
             this.mapSplitContainer.Panel1.ResumeLayout(false);
             this.mapSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mapSplitContainer)).EndInit();
             this.mapSplitContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxTOCControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxMapControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainAxToolbarControl)).EndInit();
             this.ResumeLayout(false);
 
