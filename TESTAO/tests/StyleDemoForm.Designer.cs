@@ -33,17 +33,17 @@ namespace TESTAO
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.catalogPanel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dividerP1 = new System.Windows.Forms.Panel();
+            this.startMapPainter = new System.Windows.Forms.Button();
             this.showServerStyleBtn = new System.Windows.Forms.Button();
             this.showStylePanel = new System.Windows.Forms.Panel();
-            this.dividerP1 = new System.Windows.Forms.Panel();
-            this.mapPainterPanel = new System.Windows.Forms.Panel();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
+            this.mapPainterPanel = new System.Windows.Forms.Panel();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.catalogPanel.SuspendLayout();
-            this.showStylePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).BeginInit();
+            this.mapPainterPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // headerPanel
@@ -59,7 +59,7 @@ namespace TESTAO
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TESTAO.Properties.Resources.logo;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(37, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
@@ -79,25 +79,34 @@ namespace TESTAO
             // catalogPanel
             // 
             this.catalogPanel.Controls.Add(this.dividerP1);
-            this.catalogPanel.Controls.Add(this.button2);
+            this.catalogPanel.Controls.Add(this.startMapPainter);
             this.catalogPanel.Controls.Add(this.showServerStyleBtn);
             this.catalogPanel.Location = new System.Drawing.Point(0, 48);
             this.catalogPanel.Name = "catalogPanel";
             this.catalogPanel.Size = new System.Drawing.Size(200, 393);
             this.catalogPanel.TabIndex = 1;
             // 
-            // button2
+            // dividerP1
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.button2.Location = new System.Drawing.Point(12, 97);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 48);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "2.使用格式刷";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.dividerP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(140)))));
+            this.dividerP1.Location = new System.Drawing.Point(190, 0);
+            this.dividerP1.Name = "dividerP1";
+            this.dividerP1.Size = new System.Drawing.Size(10, 393);
+            this.dividerP1.TabIndex = 2;
+            // 
+            // startMapPainter
+            // 
+            this.startMapPainter.FlatAppearance.BorderSize = 0;
+            this.startMapPainter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.startMapPainter.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.startMapPainter.Location = new System.Drawing.Point(12, 97);
+            this.startMapPainter.Name = "startMapPainter";
+            this.startMapPainter.Size = new System.Drawing.Size(172, 48);
+            this.startMapPainter.TabIndex = 1;
+            this.startMapPainter.Text = "2.使用格式刷";
+            this.startMapPainter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.startMapPainter.UseVisualStyleBackColor = true;
+            this.startMapPainter.Click += new System.EventHandler(this.startMapPainter_Click);
             // 
             // showServerStyleBtn
             // 
@@ -111,30 +120,14 @@ namespace TESTAO
             this.showServerStyleBtn.Text = "1.读取.StyleServer文件";
             this.showServerStyleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.showServerStyleBtn.UseVisualStyleBackColor = true;
+            this.showServerStyleBtn.Click += new System.EventHandler(this.showServerStyleBtn_Click);
             // 
             // showStylePanel
             // 
-            this.showStylePanel.Controls.Add(this.axMapControl1);
             this.showStylePanel.Location = new System.Drawing.Point(200, 48);
             this.showStylePanel.Name = "showStylePanel";
             this.showStylePanel.Size = new System.Drawing.Size(584, 393);
             this.showStylePanel.TabIndex = 2;
-            // 
-            // dividerP1
-            // 
-            this.dividerP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(140)))));
-            this.dividerP1.Location = new System.Drawing.Point(190, 0);
-            this.dividerP1.Name = "dividerP1";
-            this.dividerP1.Size = new System.Drawing.Size(10, 393);
-            this.dividerP1.TabIndex = 2;
-            // 
-            // mapPainterPanel
-            // 
-            this.mapPainterPanel.Location = new System.Drawing.Point(200, 48);
-            this.mapPainterPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.mapPainterPanel.Name = "mapPainterPanel";
-            this.mapPainterPanel.Size = new System.Drawing.Size(600, 393);
-            this.mapPainterPanel.TabIndex = 3;
             // 
             // axMapControl1
             // 
@@ -143,8 +136,17 @@ namespace TESTAO
             this.axMapControl1.Margin = new System.Windows.Forms.Padding(0);
             this.axMapControl1.Name = "axMapControl1";
             this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
-            this.axMapControl1.Size = new System.Drawing.Size(584, 393);
+            this.axMapControl1.Size = new System.Drawing.Size(600, 393);
             this.axMapControl1.TabIndex = 0;
+            // 
+            // mapPainterPanel
+            // 
+            this.mapPainterPanel.Controls.Add(this.axMapControl1);
+            this.mapPainterPanel.Location = new System.Drawing.Point(800, 48);
+            this.mapPainterPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mapPainterPanel.Name = "mapPainterPanel";
+            this.mapPainterPanel.Size = new System.Drawing.Size(600, 393);
+            this.mapPainterPanel.TabIndex = 3;
             // 
             // StyleDemoForm
             // 
@@ -163,8 +165,8 @@ namespace TESTAO
             this.headerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.catalogPanel.ResumeLayout(false);
-            this.showStylePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).EndInit();
+            this.mapPainterPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -174,7 +176,7 @@ namespace TESTAO
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel catalogPanel;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button startMapPainter;
         private System.Windows.Forms.Button showServerStyleBtn;
         private System.Windows.Forms.Panel showStylePanel;
         private System.Windows.Forms.PictureBox pictureBox1;
