@@ -141,6 +141,8 @@
     <Compile Include="LicenseInitializer.Designer.cs">
       <DependentUpon>LicenseInitializer.cs</DependentUpon>
     </Compile>
+    <Compile Include="tests\ConvertClass.cs" />
+    <Compile Include="tests\FeatureOperator.cs" />
     <Compile Include="tests\StyleDemoForm.cs">
       <SubType>Form</SubType>
     </Compile>
