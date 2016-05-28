@@ -142,13 +142,13 @@
       <DependentUpon>LicenseInitializer.cs</DependentUpon>
     </Compile>
     <Compile Include="tests\ConvertClass.cs" />
-    <Compile Include="tests\FeatureOperator.cs" />
     <Compile Include="tests\StyleDemoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="tests\StyleDemoForm.Designer.cs">
       <DependentUpon>StyleDemoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="tests\SymbolPainterHelper.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,10 +228,11 @@
     <None Include="res\data\testshp.gdb\a0000000b.spx" />
     <None Include="res\data\testshp.gdb\gdb" />
     <None Include="res\data\testshp.gdb\timestamps" />
-    <None Include="res\data\testshp.gdb\_gdb.YAOG470.6700.4700.sr.lock" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="res\images\logo.png" />
+    <Content Include="res\images\pgreen.png" />
+    <Content Include="res\images\pred.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

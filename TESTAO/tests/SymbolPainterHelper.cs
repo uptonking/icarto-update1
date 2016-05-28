@@ -2,32 +2,21 @@
 using ESRI.ArcGIS.Display;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace iCarto.tests
+/**********************************************************************************     
+     * Created by  Yao  on  5/26/2016 4:42:34 PM     
+     * README:读取符号并渲染到图层要素的工具类
+     * ============================================================================
+     * CHANGELOG：
+    ********************************************************************************/
+namespace TESTAO.tests
 {
-    public partial class AOForm : Form
+    public static class SymbolPainterHelper
     {
-        public AOForm()
-        {
-
-            InitializeComponent();
-
-            //MapControl显示shapefile
-            string lhkRailFilePath = @"C:\Users\Yao\Documents\Visual Studio 2012\Projects\iCarto\iCarto\res\data\lhk行政驻地点shapefileUpdate\";
-            string lhkRailFileName = @"govpoi";
-            mainAxMapControl.AddShapeFile(lhkRailFilePath, lhkRailFileName);
-
-
-        }
-
-
         ///<summary>
         ///获取符号库中符号
         ///</summary>
@@ -35,12 +24,10 @@ namespace iCarto.tests
         ///<param name="sGalleryClassName">GalleryClass名称</param>
         ///<param name="symbolName">符号名称</param>
         ///<returns>符号</returns>
-        public ISymbol GetSymbol(string sServerStylePath, string sGalleryClassName, string symbolName)
+        public static ISymbol GetSymbol(string sServerStylePath, string sGalleryClassName, string symbolName)
         {
-
             try
             {
-
                 //ServerStyleGallery对象
                 IStyleGallery pStyleGaller = new ServerStyleGalleryClass();
                 IStyleGalleryStorage pStyleGalleryStorage = pStyleGaller as IStyleGalleryStorage;
@@ -98,25 +85,25 @@ namespace iCarto.tests
         ///设置要素图层唯一值符号化
         ///</summary>
         ///<param name="pFeatureLayer"></param>
-        public void UniqueValueRenderFlyr(IFeatureLayer pFeatureLayer)
+        public static void UniqueValueRenderFlyr(IFeatureLayer pFeatureLayer, string sstylePath, string strStyleSymName)
         {
-            string stylePath = @"C:\Users\Yao\Documents\Visual Studio 2012\Projects\iCarto\iCarto\res\symbols\jinyao.ServerStyle";
+            string stylePath = sstylePath;
 
             try
             {
                 //创建UniqueValueRendererClass对象
                 IUniqueValueRenderer pUVRender = new UniqueValueRendererClass();
 
-                //存储所需.style样式的符号名
+                //获取所需.style样式文件中的符号名
                 List<string> pFieldValues = new List<string>();
-                pFieldValues.Add("乡镇级政府");
-                pFieldValues.Add("cpc_marker");
+                pFieldValues.Add(strStyleSymName);
+                //pFieldValues.Add("green_accent");
 
                 //获取所需的符号名的符号
                 for (int i = 0; i < pFieldValues.Count; i++)
                 {
                     ISymbol pSymbol = new SimpleMarkerSymbolClass();
-                    pSymbol = GetSymbol(stylePath, "Marker Symbols", pFieldValues[i]);
+                    pSymbol = GetSymbol(stylePath, "Fill Symbols", pFieldValues[i]);
                     //添加唯一值符号化字段值和相对应的符号
                     pUVRender.AddValue(pFieldValues[i], pFieldValues[i], pSymbol);
                 }
@@ -137,13 +124,5 @@ namespace iCarto.tests
             }
         }
 
-
-
-        public void formatPainterBtn_Click(object sender, EventArgs e)
-        {
-            IFeatureLayer pFeatureLayer = this.mainAxMapControl.get_Layer(0) as IFeatureLayer;
-            UniqueValueRenderFlyr(pFeatureLayer);
-            this.mainAxMapControl.Refresh();
-        }
     }
 }

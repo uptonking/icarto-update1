@@ -17,10 +17,12 @@ namespace TESTAO
     public partial class StyleDemoForm : Form
     {
         private IMapControl3 m_mapControl = null;
-         IMap pMap;
 
-            IActiveView pActiveView;
+        private IMap pMap;
 
+        private IActiveView pActiveView;
+
+        private bool hasSelected = false;
 
         //样式集
         IStyleGallery styleGallery;
@@ -39,7 +41,7 @@ namespace TESTAO
         //样式转图片类
         ConvertClass convertClass;
         //样式文件名
-        public string filename;
+        public string fileName;
         //样式文件路径
         public string filePath;
         //当前选择的节点
@@ -57,8 +59,6 @@ namespace TESTAO
             convertClass = new ConvertClass();
 
 
-            //读取并显示.StyleServer文件
-            showStyleSymbols();
 
             m_mapControl = (IMapControl3)axMapControl1.Object;
             initBasemap();
@@ -97,9 +97,6 @@ namespace TESTAO
                 }
                 this.tvStyleNode.ExpandAll();
             }
-
-
-
         }
 
         private string getStyleFilePath()
@@ -126,14 +123,27 @@ namespace TESTAO
             showStylePanel.Left = 200;
             mapPainterPanel.Left = 800;
 
+            tvPanel.Left = 0;
+            symPickerPanel.Left = -200;
 
+            showServerStyleBtn.ForeColor = Color.FromArgb(255, 112, 67);
+            startMapPainterBtn.ForeColor = Color.FromArgb(32, 32, 32);
+
+            //读取并显示.StyleServer文件
+            showStyleSymbols();
 
         }
 
-        private void startMapPainter_Click(object sender, EventArgs e)
+        private void startMapPainterBtn_Click(object sender, EventArgs e)
         {
             mapPainterPanel.Left = 200;
             showStylePanel.Left = 800;
+
+            tvPanel.Left = -200;
+            symPickerPanel.Left = 0;
+
+            startMapPainterBtn.ForeColor = Color.FromArgb(255, 112, 67);
+            showServerStyleBtn.ForeColor = Color.FromArgb(32, 32, 32);
         }
 
         //在listview中预览样式符号
@@ -222,62 +232,88 @@ namespace TESTAO
         {
 
             ITopologicalOperator pTopo;
-                        IGeometry pGeometry;
-                        IFeature pFeature;
-                        IFeatureLayer pFeatureLayer;
-                        DataTable dataTable;
-                        
-                        for (int i = 0; i < axMapControl1.Map.LayerCount; i++)
-                        {
-                            
-                            IPoint pPoint = new PointClass();
-                            pPoint.PutCoords(e.mapX, e.mapY);
-                            pTopo = pPoint as ITopologicalOperator;
-                            double m_Radius = 1;
-                            pGeometry = pTopo.Buffer(m_Radius); 
-                            if (pGeometry == null)
-                                continue;
-                            axMapControl1.Map.SelectByShape(pGeometry, null, true);//第三个参数为是否只选中一个
-                            axMapControl1.Refresh(esriViewDrawPhase.esriViewGeoSelection, null, null); //选中要素高亮显示
-                        }
+            IGeometry pGeometry;
 
-            #region 备用方法
-            //pMap = axMapControl1.Map;
+            pMap = axMapControl1.Map;
 
-            //pActiveView = pMap as IActiveView;
+            pActiveView = pMap as IActiveView;
 
-            ////通过鼠标，取得一个包络线对象
-            //IEnvelope pEnvelope = axMapControl1.TrackRectangle();
+            if (hasSelected)
+            {
+                axMapControl1.Map.ClearSelection();
+                hasSelected = false;
+            }
+            else
+            {
+                IPoint pPoint = new PointClass();
+                pPoint.PutCoords(e.mapX, e.mapY);
+                pTopo = pPoint as ITopologicalOperator;
 
-            //// 设置一个新环境
-            //ISelectionEnvironment pSelectionEnv = new SelectionEnvironmentClass();
+                //鼠标点处半径1.11m
+                double m_Radius = 0.00001;
 
-            //// 再改变原来要素的颜色值
-            //pSelectionEnv.DefaultColor = GetRGB(255, 112, 67);
+                pGeometry = pTopo.Buffer(m_Radius);
 
-            //pMap.SelectByShape(pEnvelope, pSelectionEnv, true);
-            //pActiveView.PartialRefresh(esriViewDrawPhase.esriViewGeoSelection, null, null);
-            //MessageBox.Show("是否更改符号","确认？",MessageBoxButtons.YesNo);
-            #endregion
+                //第三个参数为是否只选中一个
+                pMap.SelectByShape(pGeometry, null, true);
+                pActiveView.PartialRefresh(esriViewDrawPhase.esriViewGeoSelection, null, null); //选中要素高亮显示
+                hasSelected = true;
+
+                if (MessageBox.Show("是否更改符号", "确认？", MessageBoxButtons.YesNo) == DialogResult
+ .Yes)
+                {
+                    Render4rdLayer("green_accent");
+                }
+                else
+                {
+                    //nothing 
+                }
+
+
+
+            }
         }
 
-
-
-        //定义颜色方法
-        private IRgbColor GetRGB(int r, int g, int b)
+        private void pgreen_Click(object sender, EventArgs e)
         {
+            Render4rdLayer("green_accent");
 
-            //利用IRgbColor 接口，分别设置R、G、B三个值参数
-            IRgbColor pRgbColor = new RgbColorClass();
+            //// 获取选择集
+            //ISelection pSelection = axMapControl1.Map.FeatureSelection;
 
-            pRgbColor.Red = r;
-            pRgbColor.Green = g;
-            pRgbColor.Blue = b;
+            //// 打开属性标签
 
-            //返回对象值
-            return pRgbColor;
+            //IEnumFeatureSetup pEnumFeatureSetup = pSelection as IEnumFeatureSetup;
+
+            //pEnumFeatureSetup.AllFields = true;
+
+            //IEnumFeature pEnumFeature = pSelection as IEnumFeature;
+
+            //IFeature pFeature = pEnumFeature.Next();
 
 
+            //while (pFeature != null)
+            //{
+
+            //    MessageBox.Show(pFeature.Fields.get_Field(5).Name);
+
+            //    pFeature = pEnumFeature.Next();
+
+            //}
+
+
+        }
+
+        private void pred_Click(object sender, EventArgs e)
+        {
+            Render4rdLayer("circle_transparent");
+        }
+
+        public void Render4rdLayer(string strSymName)
+        {
+            IFeatureLayer pFeatureLayer = this.axMapControl1.get_Layer(3) as IFeatureLayer;
+            SymbolPainterHelper.UniqueValueRenderFlyr(pFeatureLayer, getStyleFilePath(), strSymName);
+            this.axMapControl1.Refresh();
         }
 
     }

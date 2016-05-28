@@ -100,6 +100,18 @@
     <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="FontAwesomeIcons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\FontAwesomeIcons\bin\Debug\FontAwesomeIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="LollipopUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\LollipopUI\bin\Debug\LollipopUI.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\MaterialSkin\bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -117,6 +129,10 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\Transitions\bin\Debug\Transitions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="arcobjects\contextmenu\LayerSelectable.cs" />
@@ -1280,24 +1296,6 @@
     <Folder Include="controller\" />
     <Folder Include="res\trash\" />
     <Folder Include="tests\examples\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\libs\FontAwesomeIcons\FontAwesomeIcons.csproj">
-      <Project>{56f662a1-d1e3-453f-bf74-9d8d03b6affc}</Project>
-      <Name>FontAwesomeIcons</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\libs\LollipopUI\LollipopUI.csproj">
-      <Project>{eb11c287-896c-4dbd-8ec4-62e8cae22110}</Project>
-      <Name>LollipopUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\libs\MaterialSkin\MaterialSkin.csproj">
-      <Project>{f333bb48-3737-4476-8182-75ec76352689}</Project>
-      <Name>MaterialSkin</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\libs\Transitions\Transitions.csproj">
-      <Project>{95cde461-0720-4c3b-b5e1-d188391fb7c0}</Project>
-      <Name>Transitions</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
