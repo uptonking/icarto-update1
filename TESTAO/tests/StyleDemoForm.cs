@@ -1,8 +1,4 @@
-using ESRI.ArcGIS.Carto;
-using ESRI.ArcGIS.Controls;
-using ESRI.ArcGIS.Display;
-using ESRI.ArcGIS.Geodatabase;
-using ESRI.ArcGIS.Geometry;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,19 +6,30 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+
+using ESRI.ArcGIS.Carto;
+using ESRI.ArcGIS.Controls;
+using ESRI.ArcGIS.Display;
+using ESRI.ArcGIS.Geodatabase;
+using ESRI.ArcGIS.Geometry;
+
 using TESTAO.tests;
+
 
 namespace TESTAO
 {
+
     public partial class StyleDemoForm : Form
     {
+
+        #region 成员变量
         private IMapControl3 m_mapControl = null;
 
         private IMap pMap;
 
         private IActiveView pActiveView;
 
-        private bool hasSelected = false;
+        //private bool hasSelected = false;
 
         //样式集
         IStyleGallery styleGallery;
@@ -49,6 +56,8 @@ namespace TESTAO
 
         //符号样式文件.StyleServer路径
         string styleFilePath;
+
+        #endregion
 
         public StyleDemoForm()
         {
@@ -182,12 +191,14 @@ namespace TESTAO
             System.Windows.Forms.ListViewItem lvItem;
             this.lvSymbolView.Items.Clear();
             this.lvSymbolView.Columns.Clear();
+
             //设置LISTVIEW的列样式
             this.lvSymbolView.LargeImageList = largeImage;
             this.lvSymbolView.SmallImageList = smallImage;
             this.lvSymbolView.Columns.Add("Name", 180, System.Windows.Forms.HorizontalAlignment.Left);
             this.lvSymbolView.Columns.Add("Index", 50, System.Windows.Forms.HorizontalAlignment.Left);
             this.lvSymbolView.Columns.Add("Category", 120, System.Windows.Forms.HorizontalAlignment.Left);
+
             //重设枚举的位置
             enumStyleItem.Reset();
             //获取第一个符号
